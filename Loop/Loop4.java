@@ -10,6 +10,5 @@ public class Loop4 {
         for(i=1; i<=m;i++){
             System.out.println(n+"*"+i+"="+n*i);
     }
-   
 }
 }
