@@ -1,4 +1,5 @@
 //Write a program to reverse elements of an array..!
+//(ip) [1,2,3,4,5,6] ----> (op) [6,5,4,3,2,1]
 import java.util.*;
 public class Array8 {
         public static void main(String[] args) {
@@ -10,18 +11,20 @@ public class Array8 {
             for(int i=0; i<a.length; i++){
                 a[i] = s.nextInt();
             }
-            System.out.println("----HERE IS AN ARRAY----");
-            for(int i=0; i<a.length; i++){
-                System.out.print(a[i]+" ");
+            System.out.println("<----HERE IS AN ARRAY---->");
+            System.out.print(Arrays.toString(a));
+            System.out.println("\n<----HERE IS A REVERSE ARRAY---->");
+            for(int i=0; i<a.length/2; i++){
+                int c;
+                c = a[i];
+                a[i] = a[a.length-(i+1)];
+                a[a.length-(i+1)] = c;
             }
-            System.out.println();
-            System.out.println("----HERE IS AN ARRAY WITH REVERSE ELEMENT----");
-            for(int i=a.length-1; i>=0; i--){
-                System.out.print(a[i]+" ");
-            }
+            System.out.print(Arrays.toString(a));
              System.out.print("\nEnter size of an array:");
              size = s.nextInt();
              a = new int[size];
         }
+        s.close();
         }
 }
