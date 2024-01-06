@@ -1,12 +1,11 @@
-//Write a program to calculate the sum of all elements of an array
+//Write a program to find maximum number in an array...!
 import java.util.*;
-public class Array10 {
+public class Array12 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter size of an array:");
         int size = sc.nextInt();
         int[] a = new int[size];
-        int sum = 0;
 
         while(size!=0){
             for(int i=0; i<a.length; i++){
@@ -15,14 +14,11 @@ public class Array10 {
             System.out.print("Array is:"+Arrays.toString(a));
 
             for(int i=0; i<a.length; i++){
-                sum = sum + a[i];
+                for(int j=0; j<a.length; j++){
+                    if(a[i]>a[j]){
+                    }
+                }
             }
-            System.out.print("\nSum of all elements of an array is:"+sum);
-
-            System.out.print("\nEnter size of an array:");
-            size = sc.nextInt();
-            a = new int[size];
-            sum = 0;
         }
         sc.close();
     }
