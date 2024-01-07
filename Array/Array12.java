@@ -6,19 +6,25 @@ public class Array12 {
         System.out.print("Enter size of an array:");
         int size = sc.nextInt();
         int[] a = new int[size];
+        int max;
 
         while(size!=0){
             for(int i=0; i<a.length; i++){
                 a[i] = sc.nextInt();
             }
-            System.out.print("Array is:"+Arrays.toString(a));
+            System.out.println("Array is:"+Arrays.toString(a));
+            max = a[0];
 
-            for(int i=0; i<a.length; i++){
-                for(int j=0; j<a.length; j++){
-                    if(a[i]>a[j]){
-                    }
+            for(int i=1; i<a.length; i++){
+                if(a[i] > max){
+                    max = a[i];
                 }
             }
+            System.out.println("Maximum element in an array is:"+max);
+            System.out.print("Enter size of an array:");
+            size = sc.nextInt();
+            a = new int[size];
+
         }
         sc.close();
     }
